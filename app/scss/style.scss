@@ -3,6 +3,11 @@
 @import 'base/reset';
 @import '../../node_modules/animate-scss/animate.scss';
 
+@font-face {
+    font-family: 'Kom-post';
+    src: url(../fonts/kom-post.ttf);
+}
+
 .header {
     padding-bottom: 40px;
     margin-bottom: 40px;
@@ -34,15 +39,20 @@
     &__promo {
         display: flex;
         align-items: center;
+        min-height: 100vh;
         &-content {
+            max-width: 700px;
         }
         &-title {
             font-size: 74px;
             line-height: 82px;
             color: $main-color;
             font-weight: 900;
+            font-family: 'Kom-post', cursive;
+            margin-bottom: 30px;
         }
         &-text {
+            margin-bottom: 30px;
         }
         &-btn {
         }
@@ -55,13 +65,14 @@
 }
 
 #about {
-    margin-bottom: 50px;
+    min-height: 100vh;
     .about__title {
+        text-align: left;
+        margin-bottom: 30px;
     }
 
     .about__text {
-        text-align: center;
-        max-width: 90%;
+        text-align: left;
         margin: 0 auto;
     }
 }
@@ -70,58 +81,68 @@
     padding-bottom: 40px;
     margin-bottom: 40px;
     &__inner {
+        .step {
+            @include fadeInRight;
+            position: relative;
+            margin: 0 auto;
+            min-height: 100vh;
+            &__subtitle {
+                font-size: 170px;
+                line-height: 125%;
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                color: $main-color;
+            }
+            &__inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            &__content {
+                max-width: 600px;
+            }
+            &__img {
+            }
+            &:nth-child(odd) {
+                .step__subtitle {
+                    text-align: right;
+                    right: 0;
+                }
+                .step__inner {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
     }
     &__title {
         
     }
-    .step {
-        border: 1px solid $font-color;
-        @include fadeInRight;
-        position: relative;
-        max-width: 80%;
-        margin: 0 auto;
-        margin-bottom: 30px;
-        &__subtitle {
-            font-size: 170px;
-            line-height: 125%;
-            display: inline-block;
-            position: absolute;
-            top: 0;
-            color: $main-color;
-        }
-        &__inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        &__content {
-            max-width: 600px;
-        }
-        &__img {
-        }
-        &:nth-child(odd) {
-            .step__subtitle {
-                text-align: right;
-                right: 0;
-            }
-            .step__inner {
-                flex-direction: row-reverse;
-            }
-        }
+    
+}
+
+.conclusion {
+    margin-bottom: 100px;
+    &__text {
+
     }
 }
 
 #prices {
     padding-bottom: 40px;
     margin-bottom: 40px;
+    min-height: 100vh;
     .prices__title {
+        text-align: left;
     }
 }
 
 #contacts {
     margin-bottom: 40px;
+    min-height: 100vh;
     padding-bottom: 40px;
     .contacts__title {
+        text-align: left;
     }
 }
 
