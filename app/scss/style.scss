@@ -1,13 +1,18 @@
 @import 'base/global';
 @import 'base/var';
 @import 'base/reset';
+@import '../../node_modules/animate-scss/animate.scss';
 
 .header {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
     &__inner {
         display: flex;
         padding: 10px 0;
         justify-content: space-between;
         margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 26px;
     }
     .logo {
         &__img {
@@ -30,12 +35,11 @@
         display: flex;
         align-items: center;
         &-content {
-            flex-grow: 1;
         }
         &-title {
             font-size: 74px;
             line-height: 82px;
-            color: $title-color;
+            color: $main-color;
             font-weight: 900;
         }
         &-text {
@@ -50,32 +54,79 @@
     }
 }
 
+#about {
+    margin-bottom: 50px;
+    .about__title {
+    }
 
-
-
-
-
-.about__title {
+    .about__text {
+        text-align: center;
+        max-width: 90%;
+        margin: 0 auto;
+    }
 }
-.section__title {
-}
+
 .steps {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    &__inner {
+    }
+    &__title {
+        
+    }
+    .step {
+        border: 1px solid $font-color;
+        @include fadeInRight;
+        position: relative;
+        max-width: 80%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        &__subtitle {
+            font-size: 170px;
+            line-height: 125%;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            color: $main-color;
+        }
+        &__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__content {
+            max-width: 600px;
+        }
+        &__img {
+        }
+        &:nth-child(odd) {
+            .step__subtitle {
+                text-align: right;
+                right: 0;
+            }
+            .step__inner {
+                flex-direction: row-reverse;
+            }
+        }
+    }
 }
-.steps__inner {
+
+#prices {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    .prices__title {
+    }
 }
-.steps__title {
+
+#contacts {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    .contacts__title {
+    }
 }
-.step {
-}
-.step__subtitle {
-}
-.section__subtitle {
-}
-.prices__title {
-}
-.contacts__title {
-}
+
 .footer {
+    padding: 40px 0;
 }
 
 

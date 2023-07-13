@@ -52,7 +52,8 @@ function browsersync(){
 
 function scripts(){
     return src([
-        'node_modules/jquery/dist/jquery.js', //обращаемся ко всем файлам js 
+        'node_modules/jquery/dist/jquery.js', 
+        'app/js/wow.js', //обращаемся ко всем файлам js 
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js')) //объединяем файлы в один с таким названием 
