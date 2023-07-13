@@ -1,0 +1,26 @@
+$title-color: #222222;
+$text-color: #404756;
+$pink-color: #F7859C;
+
+@mixin bold-text {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: $title-color;
+}
+
+@mixin item__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 32px;
+    color: $title-color;
+}
+
+@mixin item__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+    color: $title-color;
+}
