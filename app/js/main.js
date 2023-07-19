@@ -23,4 +23,18 @@ $(function(){
     menuBtn.addEventListener('click', () => {
         menu.classList.toggle('active')
     })
+
+
+    //fixed menu
+    window.addEventListener('scroll', () => {
+        const ScrollHeight = window.pageYOffset;
+        const headerWrapper = document.querySelector('.header__inner');
+        const headerTopHeight = headerWrapper.getBoundingClientRect().height;
+    
+        if(ScrollHeight > headerTopHeight) {
+          headerWrapper.classList.add('header__fixed');
+        } else {
+          headerWrapper.classList.remove('header__fixed');
+        }
+      })
 });

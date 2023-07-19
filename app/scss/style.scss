@@ -3,10 +3,7 @@
 @import 'base/reset';
 @import '../../node_modules/animate-scss/animate.scss';
 
-@font-face {
-    font-family: 'Kom-post';
-    src: url(../fonts/kom-post.ttf);
-}
+
 
 .header {
     padding-bottom: 40px;
@@ -62,9 +59,9 @@
         &-title {
             font-size: 74px;
             line-height: 82px;
-            color: $main-color;
-            font-weight: 900;
-            font-family: 'Kom-post', cursive;
+            color: $contrast-color;
+            font-family: 'Sansita', sans-serif;
+            font-weight: 700;
             margin-bottom: 30px;
         }
         &-text {
@@ -73,15 +70,25 @@
         &-btn {
             padding: 10px 15px;
             border-radius: 15px;
+            background-color: $contrast-color;
 
-        }
-        &-media {
         }
         &-img {
             transform: scale(-1, 1);
             min-width: 470px;
         }
     }
+}
+
+.header__fixed {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    color: $background-color;
+    box-shadow: 0px 12px 30px rgba(4, 2, 33, 0.28);
 }
 
 #about {
@@ -138,7 +145,9 @@
     text-align: center;
     min-height: 100vh;
     &__text {
-
+        padding: 50px 20px;
+        background-color: #fff;
+        color: $background-color;
     }
 }
 
