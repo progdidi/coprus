@@ -106,12 +106,15 @@
 
     <section class="conclusion">
         <div class="container">
-
+            <img class="conclusion__img" src="images/lion.png" alt="">
             <p class="conclusion__text">
                 Ну а если вы пропустили все эти роковые стадии. То я готов ебануть вам текст хоть для поста, хоть для статьи, хоть для чего. Получится искренне, будто улыбка больного синдромом Дауна и продающе, будто дуло револьвера. Вот такие пироги.
             </p>
 
-            <img src="images/conclusion-removebg-preview.png" alt="" class="conclusion__img">
+            
+<!-- 
+            <img src="images/conclusion-removebg-preview.png" alt="" class="conclusion__img"> -->
+            
         </div>
     </section>
 
@@ -151,12 +154,37 @@
     <div id="contacts">
         <div class="container">
             <h3 class="contacts__title section__title">контакты</h3>
+
+            <div class="contacts__inner">
+                <div class="contacts__description">
+                    <h6 class="contacts__description-title section__subtitle">Напиши мне!</h6>
+                    <p class="contacts__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut fugiat natus consequatur voluptas eaque minus odio quia inventore fugit pariatur, quasi sed! Debitis, voluptatibus ex! Dolores necessitatibus delectus molestiae doloribus?</p>
+                    <a href="mail:progdidi@gmail.com" class="contacts__description-mail">progdidi@gmail.com</a>
+                    <p class="contacts__description-telegram">my telegram<a href="" class="contacts__description-link"></a></p>
+                    
+                </div>
+                <form action="mailer/mailer/smart.php" method="POST" class="contacts__form">
+                    <h6 class="contacts__form-title section__subtitle">Send me a message</h6>
+                    <input type="text" class="contacts__form-input" placeholder="Your name" name="name">
+                    <input type="mail" class="contacts__form-input" placeholder="Email" name="email">
+                    <textarea id="" cols="30" rows="10" class="contacts__form-text" name="message"></textarea>
+                    <button type="submit" class="contacts__form-btn">Send</button>
+                </form>
+            </div>
         </div>
     </div>
 
     <footer class="footer">
         <div class="container">
-
+            <div class="social">
+                <ul class="social__list">
+                    <li class="social__list-item"><a href="https://github.com/progdidi" class="social__list-link" target="_blank"><img src="images/social/github.svg" alt="github" class="social__list-img"></a></li>
+                    <li class="social__list-item"><a href="https://www.linkedin.com/in/progdidi/" class="social__list-link" target="_blank"><img src="images/social/linkedin.svg" alt="linkedin" class="social__list-img"></a></li>
+                    <li class="social__list-item"><a href="https://www.instagram.com/smetankihochesh/" class="social__list-link" target="_blank"><img src="images/social/instagram.svg" alt="instagram" class="social__list-img"></a></li>
+                    <li class="social__list-item"><a href="https://wa.me/48696617119" class="social__list-link" target="_blank"><img src="images/social/whatsapp.svg" alt="whatsapp" class="social__list-img"></a></li>
+                    <li class="social__list-item"><a href="https://t.me/progdidi" class="social__list-link" target="_blank"><img src="images/social/telegram.svg" alt="telegram" class="social__list-img"></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
     

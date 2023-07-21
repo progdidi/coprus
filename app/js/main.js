@@ -1,9 +1,8 @@
 $(function(){
-    //scroll audio
+    //SCROLL AUDIO
     const audio = new Audio();
     audio.preload = 'auto';
     audio.src = '../helpers/print.mp3';
-
     let timer = null;
 
     document.addEventListener('scroll', () => {
@@ -15,8 +14,7 @@ $(function(){
         }, 100);
     })
 
-
-    //hamburger menu
+    //HAMBURGER MENU
     const menuBtn = document.querySelector('.menu__btn');
     const menu = document.querySelector('.menu__list');
 
@@ -25,7 +23,7 @@ $(function(){
     })
 
 
-    //fixed menu
+    //FIXED MENU
     window.addEventListener('scroll', () => {
         const ScrollHeight = window.pageYOffset;
         const headerWrapper = document.querySelector('.header__inner');
@@ -37,4 +35,19 @@ $(function(){
           headerWrapper.classList.remove('header__fixed');
         }
       })
+
+    //CONTACTS FORM
+    const form = document.querySelector('.contacts__form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "mailer/mailer/smart.php",
+        data: $(this).serialize()
+      }).done(function() {
+        $(this).find("input").val("");
+      });
+      return false;
+
+    })
 });
