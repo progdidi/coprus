@@ -63,6 +63,13 @@
             }
         }
     }
+
+    #about {
+    
+        .about__inner {
+            flex-direction: column;
+        }
+    }
     
 }
 
