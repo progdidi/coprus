@@ -18,7 +18,7 @@ $mail->Password = 'auwbxazvjanagzzn';                           // Наш пар
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('pididish25@gmail.com', 'Portfolio');   // От кого письмо 
+$mail->setFrom('pididish25@gmail.com', 'Ivan Zhdanov website');   // От кого письмо 
 $mail->addAddress('progdidi@gmail.com');   
 $mail->isHTML(true);                                  // Set email format to HTML
 

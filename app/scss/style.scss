@@ -113,6 +113,10 @@
         margin: 0 auto;
         max-width: 500px;
     }
+
+    .about__img {
+        min-height: 800px;
+    }
 }
 
 .steps {
@@ -137,6 +141,7 @@
                 max-width: 600px;
             }
             &__img {
+                min-height: 800px;
             }
             &:nth-child(odd) {
                 .step__inner {
@@ -197,6 +202,10 @@
                 justify-content: space-between;
             }
         }
+
+        &__img {
+            min-height: 800px;
+        }
     }
     
 }
@@ -211,57 +220,23 @@
             text-align: left;
             padding-bottom: 10px;
             border-bottom: 4px solid #fff;
+            margin-bottom: 40px;
         }
 
-        &__inner {
-            display: flex;
-            justify-content: space-between;
-            background-color: #fff;
-            color: $background-color;
-            max-width: 900px;
+        &__content {
+            width: 80%;
             margin: 0 auto;
-            padding: 53px 125px;
-            border-radius: 30px;
-            position: relative;
-            &::after {
-                position: absolute;
-                content: '';
-                width: 300px;
-                height: 400px;
-                background-image: url(../images/contacts/contacts.svg);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-                bottom: -100px;
-                right: 0;
-            }
-    
+            justify-content: center;
+            background-color: rgba(245, 245, 245, 0.7);
+            padding: 10px 0;
+            border-radius: 10px;
         }
-        &__description {
-            max-width: 250px;
-            &-title {
-                margin-bottom: 50px;
-            }
-            &-text {
-                margin-bottom: 50px;
-    
-            }
-            &-mail {
-                display: block;
-                margin-bottom: 14px;
-    
-            }
-            &-telegram {
-    
-            }
-            &-link {
-    
-            }
-        }
+
         &__form {
             max-width: 350px;        
             display: flex;
             flex-direction: column;
+            margin: 0 auto;
             &-title {
                 margin-bottom: 20px;
             }
@@ -289,6 +264,7 @@
             }
             &-btn {
                 max-width: 160px;
+                margin: 0 auto;
                 padding: 8px 17px;
                 box-shadow: 0px 10px 20px rgba(2, 4, 6, 0.15);
                 border-radius: 10px;
