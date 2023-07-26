@@ -1,4 +1,8 @@
 $(function(){
+
+    //scroll animation
+    new WOW().init();
+
     //SCROLL AUDIO
     const audio = new Audio();
     audio.preload = 'auto';

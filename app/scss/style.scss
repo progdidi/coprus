@@ -1,6 +1,8 @@
 @import 'base/global';
 @import 'base/var';
 @import 'base/reset';
+@import 'blocks/clippy';
+@import '../../node_modules/animate-scss/animate.scss';
 @import '../../node_modules/animate-scss/animate.scss';
 
 
@@ -112,6 +114,7 @@
         text-align: left;
         margin: 0 auto;
         max-width: 500px;
+        @include fadeInRight;
     }
 
     .about__img {
