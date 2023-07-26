@@ -54,4 +54,17 @@ $(function(){
       return false;
 
     })
+
+
+    //fixed scroll
+    const clippy = document.querySelector('.clip');
+    const step = document.querySelector('.step');
+
+    function scrollToItem(item) {
+      clippy.addEventListener('click', () => {item.scrollIntoView();})
+    };
+
+    scrollToItem(step);
+
+   
 });

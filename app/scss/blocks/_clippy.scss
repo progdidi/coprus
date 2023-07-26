@@ -1,51 +1,62 @@
+@import '../../node_modules/animate-scss/animate.scss';
 
-
+.clippy {
+    @include fadeIn;
+}
 .clip {
     // position: absolute;
-    position: fixed;
-    bottom: 10vmin;
-    left: 10vmin;
-    width: 9vmin;
-    height: 12vmin;
-    border: 1vmin solid #aaa;
+    position: absolute;
+    bottom: 0;
+    left: 8vmin;
+    width: 6vmin;
+    height: 6vmin;
+    border: 0.60vmin solid #aaa;
     border-top: 0;
     border-radius: 0 0 10vmin 10vmin;
     box-sizing: border-box;
+    transition: all 0.5s;
+    cursor: pointer;
+    @include fadeIn;
+    animation-duration: 2s;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -8vmin;
+        left: -0.7vmin;
+        width: 5.75vmin;
+        height: 8vmin;
+        border: 0.60vmin solid #aaa;
+        border-bottom: 0;
+        border-radius: 10vmin 10vmin 0 0;
+        box-sizing: border-box;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -2.5vmin;
+        left: 0.25vmin;
+        width: 4.5vmin;
+        height: 7vmin;
+        border: 0.60vmin solid #aaa;
+        border-top: 0;
+        border-radius: 0 0 10vmin 10vmin;
+        box-sizing: border-box;
+    }
+
+    &:hover {
+        transform: scale(1.2);
+    }
   }
   
-  .clip::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -15vmin;
-    left: -1vmin;
-    width: 7.75vmin;
-    height: 15vmin;
-    border: 1vmin solid #aaa;
-    border-bottom: 0;
-    border-radius: 10vmin 10vmin 0 0;
-    box-sizing: border-box;
-  }
-  
-  .clip::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -2.5vmin;
-    left: 0.25vmin;
-    width: 6.5vmin;
-    height: 9vmin;
-    border: 1vmin solid #aaa;
-    border-top: 0;
-    border-radius: 0 0 10vmin 10vmin;
-    box-sizing: border-box;
-  }
   
   .eye {
     position: absolute;
     top: -75%;
     left: -35%;
-    width: 75%;
+    width: 65%;
     height: 35%;
     background: white;
     border-radius: 50%;
@@ -53,19 +64,19 @@
     background-image: radial-gradient(circle, black 15%, transparent 0);
     box-shadow:
       inset 0 1.25vmin 0 -0.5vmin #aaa,
-      inset 0 0 1vmin #aaa
+      inset 0 0 1vmin #aaa;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -20%;
+        width: 100%;
+        height: 90%;
+        border-radius: 50%;
+        box-shadow: -0.25vmin -1vmin 0 -0.25vmin black;
+    }
   }
   
-  .eye::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -20%;
-    width: 100%;
-    height: 90%;
-    border-radius: 50%;
-    box-shadow: -0.25vmin -1vmin 0 -0.25vmin black;
-  }
   
   .eye + .eye {
     left: 45%;
@@ -78,31 +89,30 @@
 
 
 .popup {
-    // position: absolute;
+    position: absolute;
     color: #000;
-    position: fixed;
-    bottom: 35vmin;
-    left: 20vmin;
+    font-size: 14px;
+    line-height: 17px;
+    bottom: 25vmin;
+    left: 15vmin;
     width: 30vmin;
     padding: 2vmin;
     background: #ffc;
     border-radius: 1vmin;
     border: 0.375vmin solid #666;
-    font-size: 3vmin;
     font-family: Tahoma, "Courier New", Courier, sans-serif;
-    line-height: 1.25;
-  }
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 10%;
+        width: 6vmin;
+        height: 6vmin;
+        border-left: 0.375vmin solid #666;
+        background-image: linear-gradient(-45deg, transparent 50%, #666 0 54%,  #ffc 0);
+        transform: skew(-30deg);
+    }
+}
   
-  .popup::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 10%;
-    width: 6vmin;
-    height: 6vmin;
-    border-left: 0.375vmin solid #666;
-    background-image: linear-gradient(-45deg, transparent 50%, #666 0 54%,  #ffc 0);
-    transform: skew(-30deg);
-  }
   
