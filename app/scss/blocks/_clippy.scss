@@ -2,6 +2,8 @@
 
 .clippy {
     @include fadeIn;
+    position: relative;
+    min-height: 200px;
 }
 .clip {
     // position: absolute;
