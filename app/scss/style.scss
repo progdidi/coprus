@@ -79,6 +79,10 @@
         }
         &-img {
             min-width: 470px;
+            background-image: url(../images/blob-haikei.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
     }
 }
@@ -98,10 +102,10 @@
     min-height: 100vh;
     margin-bottom: 50vh;
     .about__title {
-        text-align: left;
-        margin-bottom: 40px;
-        padding-bottom: 10px;
-        border-bottom: 4px solid #fff;
+        // text-align: left;
+        // margin-bottom: 40px;
+        // padding-bottom: 10px;
+        // border-bottom: 4px solid #fff;
     }
 
     .about__inner {
@@ -110,6 +114,7 @@
     }
 
     .about__text {
+        padding-top: 200px;
         text-align: left;
         margin: 0 auto;
         max-width: 500px;
@@ -130,17 +135,24 @@
             position: relative;
             margin: 0 auto;
             margin-bottom: 50vh;
+            
             &__title {
                 min-height: 100vh;
             }
             &__inner {
                 display: flex;
-                align-items: center;
                 justify-content: space-between;
                 min-height: 100vh;
+                background-image: url(../images/blob-haikei.svg);
+                background-repeat: no-repeat;
+                background-position: bottom;
+                background-size: contain;
             }
             &__content {
                 max-width: 600px;
+                padding-top: 350px;
+                position: relative;
+                
             }
             &__img {
                 min-height: 800px;
@@ -148,6 +160,9 @@
             &:nth-child(odd) {
                 .step__inner {
                     flex-direction: row-reverse;
+                    .clippy {
+                        left: 250px;
+                    }
                 }
 
                 
@@ -186,10 +201,10 @@
     min-height: 100vh;
     .prices {
         &__title {
-            text-align: left;
-            padding-bottom: 10px;
-            border-bottom: 4px solid #fff;
-            margin-bottom: 50px;
+            // text-align: left;
+            // padding-bottom: 10px;
+            // border-bottom: 4px solid #fff;
+            // margin-bottom: 50px;
         }
 
         &__inner {
@@ -251,17 +266,17 @@
     padding-bottom: 40px;
     .contacts {
         &__title {
-            text-align: left;
-            padding-bottom: 10px;
-            border-bottom: 4px solid #fff;
-            margin-bottom: 70px;
+            // text-align: left;
+            // padding-bottom: 10px;
+            // border-bottom: 4px solid #fff;
+            // margin-bottom: 70px;
         }
 
         &__content {
             width: 70%;
             margin: 0 auto;
             justify-content: center;
-            background-color: rgba(245, 245, 245, 0.2);
+            background-color: #161254;
             padding: 40px 0;
             border-radius: 10px;
         }
@@ -278,7 +293,7 @@
                 text-align: center;
             }
             &-input {
-                background: rgba(255, 255, 255, 0.3);
+                background: rgba(255, 255, 255, 0.1);
                 box-shadow: 0px 10px 20px rgba(2, 4, 6, 0.15);
                 border-radius: 10px;
                 padding: 10px 20px 6px 20px;
@@ -292,7 +307,7 @@
                 }
             }
             &-text {
-                background: rgba(255, 255, 255, 0.3);
+                background: rgba(255, 255, 255, 0.1);
                 box-shadow: 0px 10px 20px rgba(2, 4, 6, 0.15);
                 border-radius: 10px;
                 margin-bottom: 20px;
