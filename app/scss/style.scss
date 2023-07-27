@@ -197,9 +197,34 @@
             align-items: center;
         }
 
-        &__content {
-            max-width: 800px;
-            min-width: 600px;
+        &__table {
+            min-width: 400px;
+            max-width: 600px;
+            font-size: 18px;
+            line-height: 22px;
+            tr {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 0;
+            }
+            .prices__item {
+                &-name {
+                    width: 30%;
+                }
+
+                &-divider {
+                    width: 45%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 10px;
+                }
+
+                &-num {
+                    width: 25%;
+                }
+            }
         }
 
         &__list {
@@ -212,7 +237,8 @@
         }
 
         &__img {
-            min-height: 800px;
+            object-fit: cover;
+            width: 40%;
         }
     }
     
