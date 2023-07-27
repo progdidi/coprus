@@ -79,6 +79,10 @@
         }
         &-img {
             min-width: 470px;
+            background-image: url(../images/blob-haikei.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
     }
 }
@@ -147,6 +151,7 @@
             &__content {
                 max-width: 600px;
                 padding-top: 350px;
+                position: relative;
                 
             }
             &__img {
@@ -155,6 +160,9 @@
             &:nth-child(odd) {
                 .step__inner {
                     flex-direction: row-reverse;
+                    .clippy {
+                        left: 250px;
+                    }
                 }
 
                 

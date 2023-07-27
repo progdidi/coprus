@@ -2,7 +2,9 @@
 
 .clippy {
     @include fadeIn;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    right: 250px;
     min-height: 200px;
 }
 .clip {
@@ -103,6 +105,8 @@
     border-radius: 1vmin;
     border: 0.375vmin solid #666;
     font-family: Tahoma, "Courier New", Courier, sans-serif;
+    
+
     &::before {
         content: "";
         display: block;
@@ -115,6 +119,9 @@
         background-image: linear-gradient(-45deg, transparent 50%, #666 0 54%,  #ffc 0);
         transform: skew(-30deg);
     }
+
 }
+
+
   
   
