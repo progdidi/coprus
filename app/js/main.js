@@ -7,6 +7,7 @@ $(function(){
     const audio = new Audio();
     audio.preload = 'auto';
     audio.src = '../helpers/print.mp3';
+    audio.type = 'audio/mpeg';
     let timer = null;
 
     document.addEventListener('scroll', () => {
