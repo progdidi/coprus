@@ -30,7 +30,7 @@ $(function(){
     //FIXED MENU
     window.addEventListener('scroll', () => {
         const ScrollHeight = window.pageYOffset;
-        const headerWrapper = document.querySelector('.header__inner');
+        const headerWrapper = document.querySelector('.header__top');
         const headerTopHeight = headerWrapper.getBoundingClientRect().height;
     
         if(ScrollHeight > headerTopHeight) {
