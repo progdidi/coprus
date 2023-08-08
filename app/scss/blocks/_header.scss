@@ -7,7 +7,7 @@
         &-inner {
             display: flex;
             align-items: center;
-            padding: 10px 0;
+            padding: 20px 0;
             justify-content: space-between;
             margin-bottom: 20px;
             font-size: 18px;
@@ -65,12 +65,6 @@
         }
         &-text {
             margin-bottom: 30px;
-        }
-        &-btn {
-            padding: 10px 15px;
-            border-radius: 15px;
-            background-color: $contrast-color;
-
         }
         &-img {
             min-width: 470px;
