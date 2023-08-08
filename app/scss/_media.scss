@@ -1,73 +1,17 @@
-@media (max-width: 1200px) {
-    .header {
-        &__promo {
-            &-title {
-                font-size: 61px;
-                line-height: 65px;
-            }
-        }
-    }
-    
-}
-
-@media (max-width: 1000px) {
-    .header {
-        &__promo {
-            &-title {
-                font-size: 49px;
-                line-height: 51px;
-            }
-        }
-    }
-
-    #about {
-    
-        .about__inner {
-            flex-direction: column;
-        }
-    }
-    
-}
-
 @media (max-width: 960px) {
-
-    #about {
-        .about__img {
-            margin-bottom: 40px;
-            object-fit: cover;
-            max-width: 80%;
-            min-height: 400px;
-        }
-    }
-    .steps {
-        .step {
-            &__inner {
-                flex-direction: column;
-            }
-            &:nth-child(odd) {
-                .step__inner {
-                    flex-direction:column-reverse;
-                }
-            }
-            &__img {
-                margin-bottom: 40px;
-                object-fit: cover;
-                max-width: 80%;
-                min-height: 400px;
-            }
-        }
-        
-       
-    }
-
     #prices {
         .prices {
             &__inner {
                 flex-direction: column-reverse;
+                align-items: center;
             }
 
             &__img {
                 margin-bottom: 70px;
+            }
+
+            &__table {
+                margin: 0 auto;
             }
     
         }
@@ -76,30 +20,11 @@
 }
 
 @media (max-width: 900px) {
-    .header {
-        &__promo {
-            flex-direction: column;
-            align-items: center;
-            &-content {
-                padding-top: 120px;
-            }
-            &-text {
-                margin-bottom: 40px;
-            }
-            &-btn {
-                width: 216px;
-                display: block;
-                margin: 0 auto;
-            }
-            &-img {
-                max-width: 80%;
-            }
-        }
-    }
 
     .conclusion {
         &__inner {
             flex-direction: column-reverse;
+            align-items: center;
         }
 
         &__text {
@@ -115,19 +40,13 @@
 
 @media (max-width: 790px) {
     .section__title {
-        font-size: 56px;
+        font-size: 46px;
+        line-height: 55px;
     }
-    .header {
-        &__promo {
-            max-width: 90%;
-            margin: 0 auto;
-            text-align: center;
-        }
-    }
-
     .prices {
         &__inner {
             flex-direction: column;
+            align-items: center;
         }
 
         &__table {
@@ -138,60 +57,17 @@
 }
 
 @media (max-width: 520px) {
+
     .section__title {
-        font-size: 42px;
-    }
-    .header {
-        position: relative;
-        .menu {
-            &__list {
-                flex-direction: column;
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 70px;
-                color: $background-color;
-                background-color: #fff; 
-                transform: translateY(-1000%);
-                transition: all 0.5s;
-                &-item {
-                    padding: 5px 0;
-                    text-align: center;
-                }
-                &.active {
-                    transform: translateY(0);
-
-                }
-            }
-            &__btn {
-                display: flex;
-            }
-        }
-        &__promo {
-            max-width: 100%;
-            &-title {
-                font-size: 51px;
-                line-height: 51px;
-            }
-            &-img {
-                min-width: 320px;
-            }
-        }
-    }
-
-    .steps {
-        .step {
-            margin-bottom: 30vh;
-            &__title {
-                min-height: 70vh;
-            }
-        }
+        font-size: 40px;
+        line-height: 50px;
     }
 
     #prices {
         .prices {
             &__inner {
                 flex-direction: column-reverse;
+                align-items: center;
             }
 
             &__table {
@@ -210,4 +86,12 @@
 
 
     
+}
+
+@media (max-width: 420px) {
+    .section__title {
+        font-size: 35px;
+        line-height: 45px;
+        max-width: 100%;
+    }
 }

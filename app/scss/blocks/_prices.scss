@@ -1,0 +1,61 @@
+@import '../base/var';
+@import '../../../node_modules/animate-scss/animate.scss';
+
+
+#prices {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    min-height: 100vh;
+    .prices {
+        &__inner {
+            display: flex;
+            align-items: center;
+        }
+
+        &__table {
+            min-width: 400px;
+            max-width: 600px;
+            font-size: 18px;
+            line-height: 22px;
+            margin-right: 150px;
+            tr {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 0;
+            }
+            .prices__item {
+                &-name {
+                    width: 30%;
+                }
+
+                &-divider {
+                    width: 45%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 10px;
+                }
+
+                &-num {
+                    width: 25%;
+                }
+            }
+        }
+
+        &__list {
+            &-item {
+                padding: 7px 0;
+                border-bottom: 1px solid #fff;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        &__img {
+            min-height: 600px;
+        }
+    }
+    
+}

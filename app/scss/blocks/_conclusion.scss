@@ -1,0 +1,25 @@
+@import '../base/var';
+@import '../../../node_modules/animate-scss/animate.scss';
+
+.conclusion {
+    margin-bottom: 100px;
+    text-align: center;
+    min-height: 100vh;
+    padding: 50px 20px 0px 20px;
+    background-color: #fff;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__text {
+        color: $background-color;
+    }
+    &__img {
+        object-fit: cover;
+        max-width: 50%;
+        
+    }
+}

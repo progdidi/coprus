@@ -35,18 +35,17 @@ button{
     padding: 0 10px;
     margin: 0 auto;
 }
-
-
 .section__title{
     font-weight: 700;
-    font-size: 65px;
-    line-height: 58px;
+    font-size: 55px;
+    line-height: 64px;
     text-align: center;
     min-height: 100vh;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    max-width: 90%;
+    margin: 0 auto;
 
 }
