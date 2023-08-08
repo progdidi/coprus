@@ -1,0 +1,212 @@
+@import '../base/var';
+
+.header {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    &__top {
+        &-inner {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+    .logo {
+        font-weight: 700;
+        font-size: 22px;
+    }
+    
+    .menu {
+        &__list {
+            display: flex;
+            justify-content: space-evenly;
+            &-item {
+                margin-left: 30px;
+            }
+        }
+
+        &__btn {
+            width: 40px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: transparent;
+            border: none;
+            display: none;
+            span {
+                width: 40px;
+                height: 4px;
+                background-color: #fff;
+            }
+        }
+    }
+
+    &__promo {
+        &-inner {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        &-content {
+            max-width: 700px;
+        }
+        &-title {
+            font-size: 66px;
+            line-height: 77px;
+            color: $contrast-color;
+            font-family: 'Sansita', sans-serif;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        &-text {
+            margin-bottom: 30px;
+        }
+        &-btn {
+            padding: 10px 15px;
+            border-radius: 15px;
+            background-color: $contrast-color;
+
+        }
+        &-img {
+            min-width: 470px;
+            background-image: url(../images/blob-haikei.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.header__fixed {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $background-color;
+    box-shadow: 0px 12px 30px rgba(4, 2, 33, 0.28);
+}
+
+//media
+
+@media (max-width: 1200px) {
+    .header {
+        &__promo {
+            &-title {
+                font-size: 61px;
+                line-height: 65px;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    .header {
+        &__promo {
+            &-title {
+                font-size: 49px;
+                line-height: 51px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 900px) {
+    .header {
+        &__promo {
+            &-inner {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            &-content {
+                padding-top: 120px;
+                margin-bottom: 50px;
+                max-width: 95%;
+            }
+            &-text {
+                margin-bottom: 40px;
+            }
+            &-btn {
+                width: 216px;
+                display: block;
+                margin: 0 auto;
+            }
+            &-img {
+                object-fit: cover;
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 790px) {
+    .header {
+        &__promo {
+            max-width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            &-content {
+                max-width: 100%;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 520px) {
+    .header {
+        position: relative;
+        .menu {
+            &__list {
+                flex-direction: column;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 70px;
+                background-color: $background-color; 
+                transform: translateY(-1000%);
+                transition: all 0.7s;
+                padding-bottom: 20px;
+                &-item {
+                    margin-left: 0;
+                    padding: 15px 0;
+                    text-align: center;
+                    border-bottom: 0.3px solid #fff;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+                &.active {
+                    transform: translateY(0);
+
+                }
+            }
+            &__btn {
+                display: flex;
+            }
+        }
+        &__promo {
+            max-width: 100%;
+            &-content {
+                padding-top: 70px;
+            }
+            &-title {
+                font-size: 51px;
+                line-height: 58px;
+            }
+            &-img {
+                min-width: 90%;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,89 @@
+@import '../base/var';
+@import '../../../node_modules/animate-scss/animate.scss';
+
+.steps {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+        .step {
+            @include fadeInRight;
+            position: relative;
+            margin: 0 auto;
+            &__title {
+                min-height: 100vh;
+            }
+            &__inner {
+                display: flex;
+                justify-content: space-between;
+                min-height: 100vh;
+                background-image: url(../images/blob-haikei.svg);
+                background-repeat: no-repeat;
+                background-position: bottom;
+                background-size: contain;
+            }
+            &__content {
+                max-width: 600px;
+                padding-top: 250px;
+                position: relative;
+                
+            }
+            &__img {
+                min-height: 700px;
+            }
+            &:nth-child(odd) {
+                .step__inner {
+                    flex-direction: row-reverse;
+                    .clippy {
+                        left: 250px;
+                    }
+                }
+
+                
+            }
+        }
+}
+
+
+//media 
+
+@media (max-width: 960px) {
+    .steps {
+        .step {
+            &__inner {
+                flex-direction: column;
+                align-items: center;
+                background-position: left center;
+                background-size: auto;
+            }
+            &:nth-child(odd) {
+                .step__inner {
+                    flex-direction:column-reverse;
+                    align-items: center;
+                    background-position: right center;
+                }
+            }
+
+            &__content {
+                padding-top: 30px;
+            }
+            &__img {
+                margin-bottom: 10px;
+                object-fit: cover;
+                max-width: 90%;
+                min-height: 500px;
+            }
+        }
+        
+       
+    }
+}
+
+@media (max-width: 520px) {
+    .steps {
+        .step {
+            &__title {
+                min-height: 80vh;
+            }
+        }
+    }
+}

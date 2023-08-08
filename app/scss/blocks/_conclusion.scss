@@ -1,0 +1,48 @@
+@import '../base/var';
+@import '../../../node_modules/animate-scss/animate.scss';
+
+.conclusion {
+    text-align: center;
+    min-height: 100vh;
+    padding: 70px 20px 50px 20px;
+    background-color: #fff;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__text {
+        color: $background-color;
+    }
+    &__img {
+        object-fit: cover;
+        max-width: 60%;
+        
+    }
+}
+
+@media (max-width: 900px) {
+    .conclusion {
+        &__inner {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        &__text {
+            margin-bottom: 50px;
+        }
+
+        &__img {
+            max-width: 80%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .conclusion {
+        &__img {
+            max-width: 100%;
+        }
+    }
+}

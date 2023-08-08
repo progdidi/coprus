@@ -1,71 +1,71 @@
 $(function(){
 
-  //scroll animation
-  new WOW().init();
+    //scroll animation
+    new WOW().init();
 
-  //SCROLL AUDIO
-  const audio = new Audio();
-  audio.preload = 'auto';
-  audio.src = '../helpers/print.mp3';
-  audio.type = 'audio/mpeg';
-  let timer = null;
+    //SCROLL AUDIO
+    const audio = new Audio();
+    audio.preload = 'auto';
+    audio.src = '../helpers/print.mp3';
+    audio.type = 'audio/mpeg';
+    let timer = null;
 
-  document.addEventListener('scroll', () => {
-      audio.play();
+    document.addEventListener('scroll', () => {
+        audio.play();
 
-      clearTimeout(timer);
-      timer = setTimeout(function() {
-          audio.pause()
-      }, 100);
-  })
-
-  //HAMBURGER MENU
-  const menuBtn = document.querySelector('.menu__btn');
-  const menu = document.querySelector('.menu__list');
-
-  menuBtn.addEventListener('click', () => {
-      menu.classList.toggle('active')
-  })
-
-
-  //FIXED MENU
-  window.addEventListener('scroll', () => {
-      const ScrollHeight = window.pageYOffset;
-      const headerWrapper = document.querySelector('.header__top');
-      const headerTopHeight = headerWrapper.getBoundingClientRect().height;
-  
-      if(ScrollHeight > headerTopHeight) {
-        headerWrapper.classList.add('header__fixed');
-      } else {
-        headerWrapper.classList.remove('header__fixed');
-      }
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            audio.pause()
+        }, 100);
     })
 
-  //CONTACTS FORM
-  const form = document.querySelector('.contacts__form');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    $.ajax({
-      type: "POST",
-      url: "mailer/mailer/smart.php",
-      data: $(this).serialize()
-    }).done(function() {
-      $(this).find("input").val("");
-    });
-    return false;
+    //HAMBURGER MENU
+    const menuBtn = document.querySelector('.menu__btn');
+    const menu = document.querySelector('.menu__list');
 
-  })
+    menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('active')
+    })
 
 
-  //fixed scroll
-  const clippy = document.querySelector('.clip');
-  const step = document.querySelector('.step');
+    //FIXED MENU
+    window.addEventListener('scroll', () => {
+        const ScrollHeight = window.pageYOffset;
+        const headerWrapper = document.querySelector('.header__top');
+        const headerTopHeight = headerWrapper.getBoundingClientRect().height;
+    
+        if(ScrollHeight > headerTopHeight) {
+          headerWrapper.classList.add('header__fixed');
+        } else {
+          headerWrapper.classList.remove('header__fixed');
+        }
+      })
 
-  function scrollToItem(item) {
-    clippy.addEventListener('click', () => {item.scrollIntoView();})
-  };
+    //CONTACTS FORM
+    const form = document.querySelector('.contacts__form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "mailer/mailer/smart.php",
+        data: $(this).serialize()
+      }).done(function() {
+        $(this).find("input").val("");
+      });
+      return false;
 
-  scrollToItem(step);
+    })
 
- 
+
+    //fixed scroll
+    const clippy = document.querySelector('.clip');
+    const step = document.querySelector('.step');
+
+    function scrollToItem(item) {
+      clippy.addEventListener('click', () => {item.scrollIntoView();})
+    };
+
+    scrollToItem(step);
+
+   
 });
