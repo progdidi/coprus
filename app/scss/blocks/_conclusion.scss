@@ -2,12 +2,10 @@
 @import '../../../node_modules/animate-scss/animate.scss';
 
 .conclusion {
-    margin-bottom: 100px;
     text-align: center;
     min-height: 100vh;
-    padding: 50px 20px 0px 20px;
+    padding: 70px 20px 50px 20px;
     background-color: #fff;
-
     &__inner {
         display: flex;
         align-items: center;
@@ -19,7 +17,32 @@
     }
     &__img {
         object-fit: cover;
-        max-width: 50%;
+        max-width: 60%;
         
+    }
+}
+
+@media (max-width: 900px) {
+    .conclusion {
+        &__inner {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        &__text {
+            margin-bottom: 50px;
+        }
+
+        &__img {
+            max-width: 80%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .conclusion {
+        &__img {
+            max-width: 100%;
+        }
     }
 }
