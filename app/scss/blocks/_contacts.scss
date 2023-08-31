@@ -2,17 +2,15 @@
 @import '../../../node_modules/animate-scss/animate.scss';
 
 #contacts {
-    padding-top: 40px;
+    padding: 40px 0;
     margin-bottom: 40px;
     min-height: 100vh;
-    padding-bottom: 40px;
     .contacts {
-
         &__content {
-            width: 70%;
+            width: 600px;
             margin: 0 auto;
             justify-content: center;
-            background-color: #161254;
+            background-color: $blue-color;
             padding: 40px 0;
             border-radius: 10px;
         }
@@ -23,9 +21,9 @@
             flex-direction: column;
             margin: 0 auto;
             &-title {
-                margin-bottom: 20px;
-                font-size: 20px;
-                line-height: 25px;
+                margin-bottom: 30px;
+                font-size: 23px;
+                line-height: 27px;
                 text-align: center;
             }
             &-input {
@@ -53,13 +51,53 @@
             &-btn {
                 max-width: 160px;
                 margin: 0 auto;
-                padding: 8px 17px;
-                box-shadow: 0px 10px 20px rgba(2, 4, 6, 0.15);
-                border-radius: 10px;
-                font-size: 20px;
+                transition: all 0.5s;
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
     }
 
     
+}
+
+@media (max-width: 780px) {
+    #contacts {
+        .contacts {
+            &__content {
+                width: 70%;
+            }
+
+            &__form {
+                max-width: 80%;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #contacts {
+        .contacts {
+            &__content {
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    #contacts {
+        .contacts {
+            &__content {
+                width: 90%;
+            }
+            &__form {
+                &-btn {
+                    padding: 6px 11px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 }

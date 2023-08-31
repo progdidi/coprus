@@ -43,8 +43,16 @@ $(function(){
 
     //CONTACTS FORM
     const form = document.querySelector('.contacts__form');
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', formSend(e));
+
+    function formSend(e) {
+      //prevent
       e.preventDefault();
+
+      //validation
+      let error = formValidate(form);
+
+      //sending
       $.ajax({
         type: "POST",
         url: "mailer/mailer/smart.php",
@@ -53,8 +61,16 @@ $(function(){
         $(this).find("input").val("");
       });
       return false;
+    }
 
-    })
+    function formValidate(form) {
+      let error = 0;
+      let formReq = document.querySelectorAll('._req');
+
+      formReq.forEach((req) => {
+        
+      })
+    }
 
 
     //fixed scroll
