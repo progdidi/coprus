@@ -175,12 +175,12 @@
             <h3 class="contacts__title section__title">контакты</h3>
 
             <div class="contacts__content">
-                <form action="mailer/mailer/smart.php" method="POST" class="contacts__form">
-                    <h6 class="contacts__form-title section__subtitle">Напиши мне!</h6>
-                    <input type="text" class="contacts__form-input _req" placeholder="Имя" name="name">
-                    <input type="mail" class="contacts__form-input _req" placeholder="Почта" name="email">
-                    <textarea id="" cols="30" rows="10" class="contacts__form-text _req" name="message"></textarea>
-                    <button type="submit" class="contacts__form-btn main__button">отправить!</button>
+                <form action="send_mail.php" method="POST" class="contacts__form">
+                    <h6 class="contacts__form-title section__subtitle">Send me a message</h6>
+                    <input type="text" class="contacts__form-input" placeholder="Your name" name="name">
+                    <input type="mail" class="contacts__form-input" placeholder="Email" name="email">
+                    <textarea id="" cols="30" rows="10" class="contacts__form-text" name="message"></textarea>
+                    <button type="submit" class="contacts__form-btn">Send</button>
                 </form>
             </div>
 

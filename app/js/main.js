@@ -43,34 +43,39 @@ $(function(){
 
     //CONTACTS FORM
     const form = document.querySelector('.contacts__form');
-    form.addEventListener('submit', formSend(e));
-
-    function formSend(e) {
-      //prevent
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
+      // formSubmit();
+    })
 
-      //validation
-      let error = formValidate(form);
+    // async function formSubmit() {
+    //   alert ('tutut');
+    //   const data = serializeForm(form);
+    //   const response = await sendData(data);
+    //   if (response.ok) { 
+    //     let result = await response.json();
+    //     alert(result.message);
+    //     formReset();
+    //   } else {
+    //     alert ("Код ошибки: " + response.status);
+    //   }
+    // }
 
-      //sending
-      $.ajax({
-        type: "POST",
-        url: "mailer/mailer/smart.php",
-        data: $(this).serialize()
-      }).done(function() {
-        $(this).find("input").val("");
-      });
-      return false;
-    }
+    // function serializeForm(formNode) {
+    //   return new FormData(form);
+    // }
 
-    function formValidate(form) {
-      let error = 0;
-      let formReq = document.querySelectorAll('._req');
+    // async function sendData(data) {
+    //   return await fetch("send_mail.php", {
+    //     method: "POST",
+    //     body: data,
 
-      formReq.forEach((req) => {
-        
-      })
-    }
+    //   })
+    // }
+
+    // function formReset() {
+    //   form.reset();
+    // }
 
 
     //fixed scroll
