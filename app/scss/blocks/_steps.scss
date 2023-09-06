@@ -25,6 +25,9 @@
                 max-width: 600px;
                 padding-top: 250px;
                 position: relative;
+                &-text {
+                    margin-bottom: 15px;
+                }
                 
             }
             &__img {

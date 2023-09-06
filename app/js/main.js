@@ -45,37 +45,37 @@ $(function(){
     const form = document.querySelector('.contacts__form');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      // formSubmit();
+      formSubmit();
     })
 
-    // async function formSubmit() {
-    //   alert ('tutut');
-    //   const data = serializeForm(form);
-    //   const response = await sendData(data);
-    //   if (response.ok) { 
-    //     let result = await response.json();
-    //     alert(result.message);
-    //     formReset();
-    //   } else {
-    //     alert ("Код ошибки: " + response.status);
-    //   }
-    // }
+    async function formSubmit() {
+      alert ('сообщение отправили! та-дам!');
+      const data = serializeForm(form);
+      const response = await sendData(data);
+      if (response.ok) { 
+        let result = await response.json();
+        alert(result.message);
+        formReset();
+      } else {
+        alert ("Код ошибки: " + response.status);
+      }
+    }
 
-    // function serializeForm(formNode) {
-    //   return new FormData(form);
-    // }
+    function serializeForm(formNode) {
+      return new FormData(form);
+    }
 
-    // async function sendData(data) {
-    //   return await fetch("send_mail.php", {
-    //     method: "POST",
-    //     body: data,
+    async function sendData(data) {
+      return await fetch("send_mail.php", {
+        method: "POST",
+        body: data,
 
-    //   })
-    // }
+      })
+    }
 
-    // function formReset() {
-    //   form.reset();
-    // }
+    function formReset() {
+      form.reset();
+    }
 
 
     //fixed scroll

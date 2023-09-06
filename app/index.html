@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COPRUS</title>
+    <title>KOPRUS</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="images/browserconfig.xml">
+
+    <!-- opengraph -->
+    <meta property="og:title" content="Koprus - лялялялляля">
+    <meta property="og:site_name" content="koprus.ru">
+    <meta property="og:url" content="https://www.koprus.ru/">
+    <meta property="og:description" content="лялялляля">
+    <meta property="og:image" content="https://koprus.ru/images/lion.png">
+    <meta property="og:image:width" content="965"/>
+    <meta property="og:image:height" content="504"/>
+
+    <!-- fonts -->
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- styles -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Sansita:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -17,7 +41,7 @@
                 <div class="container">
                     <div class="header__top-inner">
                         <a href="" class="logo">
-                            COPRUS
+                            KOPRUS
                         </a>
                         <nav class="menu">
                             <ul class="menu__list">
@@ -41,7 +65,7 @@
                         <div class="header__promo-content">
                             <h1 class="header__promo-title">Привет, меня зовут Иван Жданов. Я копирайтер.</h1>
                             <p class="header__promo-text">Я профессионально занимаюсь текстами уже более двух дней. И готов продать вам частичку своего божьего дара, который становится проклятьем, если им не делиться.</p>
-                            <button class="header__promo-btn main__button">заказать текст!</button>
+                            <a href="#contacts" class="header__promo-btn main__button">заказать текст!</a>
                         </div>
                         <div class="header__promo-media">
                             <img src="images/mainBg.png" alt="" class="header__promo-img">
@@ -60,10 +84,18 @@
             <div class="about__inner">
                 <img src="images/aboutBg.png" alt="" class="about__img">
 
-                <p class="about__text wow animate__animated data-wow-duration="1s" data-wow-delay="0.3s"">
-                    В чём заключается мой дар? Я пишу талантливо, пишу дерзко, пишу отчаянно, словно машу ржавой заточкой в драке с голодными зэками за последнюю миску баланды во Владимирской колонии. А это что-то да значит. 
-                    Зачем вам текст? Ну хули, в 21 веке живём. Нужно продвигать свой бренд в соцсетях, а не сопли жевать.
-                </p>
+                <div class="about__info">
+                    <p class="about__info-text wow animate__animated data-wow-duration="1s" data-wow-delay="0.3s"">
+                        В чём заключается мой дар? Я пишу талантливо, пишу дерзко, пишу отчаянно, словно машу ржавой заточкой в драке с голодными зэками за последнюю миску баланды во Владимирской колонии. А это что-то да значит.
+                        
+                    </p>
+    
+                    <p class="about__info-text wow animate__animated data-wow-duration="1s" data-wow-delay="0.3s"">
+                        Зачем вам текст? Ну хули, в 21 веке живём. Нужно продвигать свой бренд в соцсетях, а не сопли жевать.
+                    </p>
+                </div>
+
+                
 
             </div>
            
@@ -81,7 +113,10 @@
                 <h3 class="step__title section__title">Почему вам стоит обратиться ко мне, а не писать самим? Ну смотрите.</h3>
                 <div class="step__inner">
                     <div class="step__content">
-                        Попробуйте написать текст сами. Ну как? Чувствуете беспомощность? Жалость к себе и ненависть ко всему, будто вам вытирает жопу мать, потому что вы по шею парализованы после того, как упали с велосипеда, решив показать, что вы умеете кататься без рук. Хватить издеваться над собой, закажите текст у меня.
+                        <p class="step__content-text">Попробуйте написать текст сами. </p>
+                        <p class="step__content-text">Ну как? </p>
+                        <p class="step__content-text">Чувствуете беспомощность? Жалость к себе и ненависть ко всему, будто вам вытирает жопу мать, потому что вы по шею парализованы после того, как упали с велосипеда, решив показать, что вы умеете кататься без рук. Хватить издеваться над собой, закажите текст у меня.</p>
+                        
 
                         
                     </div>
@@ -93,7 +128,7 @@
                 <h3 class="step__title section__title">Всё равно хотите написать текст сами?</h3>
                 <div class="step__inner">
                     <div class="step__content">
-                        Ну ладно-ладно. Вы написали текст сами. Молодцы. Но посмотрите внимательно. У вас же получилось полное говно. Текст рыхлый, тёплый и пахнет, как дыхание Алексея Венедиктова. Вымойте руки и сразу напишите мне. Попробую вам помочь
+                        Ну ладно-ладно. Вы написали текст сами. Молодцы. <br> Но посмотрите внимательно. У вас же получилось полное говно. Текст рыхлый, тёплый и пахнет, как дыхание Алексея Венедиктова. <br> Вымойте руки и сразу напишите мне. Попробую вам помочь
                         
                     </div>
                     <img src="images/step2Bg.png" alt="step" class="step__img">
@@ -104,7 +139,7 @@
                 <h3 class="step__title section__title">Всё равно продолжаете писать?</h3>
                 <div class="step__inner">
                     <div class="step__content">
-                        Ну что ж. Вы написали неплохой текст сами. А вы упёртый. Скорее всего, вы были нежеланным ребёнком, и беременная вами мать прыгала со стула, чтобы вызвать выкидыш. И только благодаря вашему упорству вам удалось появиться на свет и сейчас дурить мне голову своей графоманией. Идите на хуй.
+                        Ну что ж. <br> Вы написали неплохой текст сами. <br> А вы упёртый. <br> Скорее всего, вы были нежеланным ребёнком, и беременная вами мать прыгала со стула, чтобы вызвать выкидыш. <br> И только благодаря вашему упорству вам удалось появиться на свет и сейчас дурить мне голову своей графоманией. Идите на хуй.
                        
                     </div>
                     <img src="images/step3Bg.png" alt="step" class="step__img">
@@ -122,7 +157,7 @@
             <div class="conclusion__inner">
                 <img class="conclusion__img" src="images/lion.png" alt="">
                 <p class="conclusion__text">
-                    Ну а если вы пропустили все эти роковые стадии. То я готов ебануть вам текст хоть для поста, хоть для статьи, хоть для чего. Получится искренне, будто улыбка больного синдромом Дауна и продающе, будто дуло револьвера. Вот такие пироги.
+                    Ну а если вы пропустили все эти роковые стадии. То я готов ебануть вам текст хоть для поста, хоть для статьи, хоть для чего. Получится искренне, будто улыбка больного синдромом Дауна и продающе, будто дуло револьвера. <br> Вот такие пироги.
                 </p>
     
             </div>
@@ -175,23 +210,12 @@
             <h3 class="contacts__title section__title">контакты</h3>
 
             <div class="contacts__content">
-<<<<<<< HEAD
                 <form action="send_mail.php" method="POST" class="contacts__form">
-                    <h6 class="contacts__form-title section__subtitle">Send me a message</h6>
-                    <input type="text" class="contacts__form-input" placeholder="Your name" name="name">
-                    <input type="mail" class="contacts__form-input" placeholder="Email" name="email">
-                    <textarea id="" cols="30" rows="10" class="contacts__form-text" name="message"></textarea>
-                    <button type="submit" class="contacts__form-btn">Send</button>
-=======
-                <form action="mailer/mailer/smart.php" method="POST" class="contacts__form">
                     <h6 class="contacts__form-title section__subtitle">Напиши мне!</h6>
-
-                    <input type="text" class="contacts__form-input _req" placeholder="Имя" name="name">
-                    <input type="mail" class="contacts__form-input _req" placeholder="Почта" name="email">
-                    <textarea id="" cols="30" rows="10" class="contacts__form-text _req" name="message"></textarea>
-
-                    <button type="submit" class="contacts__form-btn main__button">отправить!</button>
->>>>>>> caf601659646bfcbb47c85129a83581a98ba2271
+                    <input type="text" class="contacts__form-input" placeholder="Имя" name="name">
+                    <input type="mail" class="contacts__form-input" placeholder="Почта" name="email">
+                    <textarea id="" cols="30" rows="10" class="contacts__form-text" name="message"></textarea>
+                    <button type="submit" class="contacts__form-btn main__button">Отправить!</button>
                 </form>
             </div>
 

@@ -9,10 +9,13 @@
         align-items: center;
     }
 
-    .about__text {
+    .about__info {
         padding: 200px 10px 0px 5px;
         max-width: 500px;
         @include fadeInRight;
+        &-text {
+            margin-bottom: 15px;
+        }
     }
 
     .about__img {
