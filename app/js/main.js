@@ -41,41 +41,50 @@ $(function(){
         }
       })
 
+
+
     //CONTACTS FORM
     const form = document.querySelector('.contacts__form');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      formSubmit();
-    })
 
-    async function formSubmit() {
-      alert ('сообщение отправили! та-дам!');
-      const data = serializeForm(form);
-      const response = await sendData(data);
-      if (response.ok) { 
-        let result = await response.json();
-        alert(result.message);
-        formReset();
-      } else {
-        alert ("Код ошибки: " + response.status);
+    function createError(input, text) {
+      const parentBox = input.parentNode;
+      parentBox.classList.add('error');
+
+      const errorLabel = document.createElement('label');
+      errorLabel.classList.add('error-label');
+      errorLabel.textContent = text;
+
+      parentBox.appendChild(errorLabel);
+      
+    }
+
+    function removeError(input) {
+      const parentBox = input.parentNode;
+      if (parentBox.classList.contains('error')) {
+        parentBox.querySelector('.error-label').remove();
+        parentBox.classList.remove('error');
       }
     }
 
-    function serializeForm(formNode) {
-      return new FormData(form);
+    function formValidate(form) {
+      let result = true;
+      const requiredInputs = form.querySelectorAll('.required');
+      
+      requiredInputs.forEach((input) => {
+        removeError(input);
+        if (input.value == "") {
+          result = false;
+          createError(input, 'поле не заполнено');
+        }})
+
+      return result;
     }
 
-    async function sendData(data) {
-      return await fetch("send_mail.php", {
-        method: "POST",
-        body: data,
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-      })
-    }
-
-    function formReset() {
-      form.reset();
-    }
+      formValidate(form) ? alert('все хорошо!') : alert('everything is bad');
+    })
 
 
     //fixed scroll

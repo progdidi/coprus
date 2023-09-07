@@ -26,14 +26,32 @@
                 line-height: 27px;
                 text-align: center;
             }
+
+            .input-box {
+                margin-bottom: 20px;
+                .error-label {
+                    font-size: 10px;
+                }
+                &.error {
+                    .contacts__form-input {
+                        border: 1px solid red;
+                    }
+
+                    .contacts__form-text {
+                        border: 1px solid red;
+                    }
+
+                }
+            }
             &-input {
+                width: 100%;
                 background: rgba(255, 255, 255, 0.1);
                 box-shadow: 0px 10px 20px rgba(2, 4, 6, 0.15);
                 border-radius: 10px;
                 padding: 10px 20px 6px 20px;
                 font-size: 17px;
                 line-height: 24px;
-                margin-bottom: 20px;
+                margin-bottom: 3px;
                 border: none;
                 color: #fff;
                 &::placeholder {
@@ -59,7 +77,6 @@
         }
     }
 
-    
 }
 
 @media (max-width: 780px) {
