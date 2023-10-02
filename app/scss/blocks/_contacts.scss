@@ -30,7 +30,7 @@
             .input-box {
                 margin-bottom: 20px;
                 .error-label {
-                    font-size: 10px;
+                    font-size: 12px;
                 }
                 &.error {
                     .contacts__form-input {
@@ -65,6 +65,7 @@
                 margin-bottom: 20px;
                 padding: 10px 20px 6px 20px;
                 color: #fff;
+                width: 100%;
             }
             &-btn {
                 max-width: 160px;

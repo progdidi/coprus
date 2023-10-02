@@ -45,57 +45,21 @@ $(function(){
 
     //CONTACTS FORM
     const form = document.querySelector('.contacts__form');
+    const formEmail = document.querySelector('.email');
 
-    function createError(input, text) {
-      const parentBox = input.parentNode;
-      parentBox.classList.add('error');
-
-      const errorLabel = document.createElement('label');
-      errorLabel.classList.add('error-label');
-      errorLabel.textContent = text;
-
-      parentBox.appendChild(errorLabel);
-      
+    function formReset(){
+      form.reset();
     }
-
-    function removeError(input) {
-      const parentBox = input.parentNode;
-      if (parentBox.classList.contains('error')) {
-        parentBox.querySelector('.error-label').remove();
-        parentBox.classList.remove('error');
-      }
-    }
-
-    function formValidate(form) {
-      let result = true;
-      const requiredInputs = form.querySelectorAll('.required');
-      
-      requiredInputs.forEach((input) => {
-        removeError(input);
-        if (input.value == "") {
-          result = false;
-          createError(input, 'поле не заполнено');
-        }})
-
-      return result;
-    }
-
+    
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-
-      formValidate(form) ? alert('все хорошо!') : alert('everything is bad');
+      const req = fetch("send_mail.php");
+      req.then(response => {
+        if(response.ok && response.status === 200){
+          alert('Форма отправлена!');
+          formReset();
+        }
+      })
     })
-
-
-    //fixed scroll
-    const clippy = document.querySelector('.clip');
-    const step = document.querySelector('.step');
-
-    function scrollToItem(item) {
-      clippy.addEventListener('click', () => {item.scrollIntoView();})
-    };
-
-    scrollToItem(step);
-
    
 });

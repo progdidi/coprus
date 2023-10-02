@@ -26,6 +26,10 @@ a{
     color: inherit;
 }
 
+img {
+    object-fit: cover;
+}
+
 button{
     cursor: pointer;
 }
@@ -54,4 +58,11 @@ button{
     padding: 10px 15px;
     border-radius: 15px;
     background-color: $contrast-color;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 20px;
+        line-height: 27px;
+    }
 }
