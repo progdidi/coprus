@@ -9,15 +9,16 @@
     &__inner {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        gap: 40px;
     }
 
     &__text {
         color: $background-color;
+        max-width: 700px;
     }
     &__img {
         object-fit: cover;
-        max-width: 60%;
+        max-width: 35%;
         
     }
 }
@@ -34,15 +35,15 @@
         }
 
         &__img {
-            max-width: 80%;
+            max-width: 60%;
         }
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .conclusion {
         &__img {
-            max-width: 100%;
+            max-width: 90%;
         }
     }
 }
