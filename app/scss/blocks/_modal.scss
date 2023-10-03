@@ -1,0 +1,30 @@
+@import '../base/var';
+
+.modal {
+    display: none;
+    background-color: rgba(128,128,128, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &__content {
+        background-color: $background-color;
+        padding: 100px 30px 20px 30px;
+        border-radius: 20px;
+        color: #fff;
+        position: relative;
+        &-btn {
+            position: absolute;
+            top: 10px;
+            right: 30px;
+        }
+    }
+    &.open {
+        display: flex;
+    }
+}
