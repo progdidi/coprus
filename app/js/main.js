@@ -1,7 +1,25 @@
+
 $(function(){
 
     //scroll animation
     new WOW().init();
+
+    
+    //Clippy
+    window.CLIPPY_CDN = '../helpers/agents/';
+    clippy.load('Rover', function(agent) {
+        agent.play('Searching');
+        const clippyItem = document.querySelector('.clippy');
+        clippyItem.addEventListener('mouseenter', () => {
+          agent.speak('Тесак себя не убивал');
+        })
+      }
+        
+    )
+
+
+    
+
 
     //SCROLL AUDIO
     const audio = new Audio();
@@ -103,14 +121,6 @@ $(function(){
 
     
 
-    //Clippy
-
-    window.CLIPPY_CDN = '../helpers/agents/'
-
-    clippy.load('Rover', function(agent) {
-   
-      agent.play('Searching');
-    });
       
  
 
