@@ -44,46 +44,52 @@ $(function(){
 
 
     //CONTACTS FORM
-    const form = document.querySelector('.contacts__form');
-    const formEmail = document.querySelector('.email');
-    const modal = document.querySelector('.modal');
-    const closeBtn = document.querySelector('.close-btn');
-
-    function formReset(){
-      form.reset();
-    }
-    
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const req = fetch("send_mail.php");
-      req.then(response => {
-        if(response.ok && response.status === 200){
-          modal.classList.add('open');
-          setTimeout(() => {
-            modal.classList.remove('open');
-          }, 500)
-          formReset();
+    {
+      const form = document.querySelector('.contacts__form');
+      const formEmail = document.querySelector('.email');
+      const modal = document.querySelector('.modal');
+      const closeBtn = document.querySelector('.close-btn');
+  
+      function formReset(){
+        form.reset();
+      }
+      
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const req =  fetch("mailer/mailer/smart.php", {
+          method: 'post',
+          body: formData
+        });
+        req.then(response => {
+          if(response.ok && response.status === 200){
+            alert('new!');
+            modal.classList.add('open');
+            setTimeout(() => {
+              modal.classList.remove('open');
+            }, 500)
+            formReset();
+          }
+        })
+      })
+  
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('open');
+      })
+  
+      modal.addEventListener('click', (e) => {
+        if(!e.target.classList.contains('modal__content')) {
+          modal.classList.remove('open');
         }
       })
+  
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape') {
+            modal.classList.remove('open');
+        }
     })
+  
+    }
 
-    closeBtn.addEventListener('click', () => {
-      modal.classList.remove('open');
-    })
-
-    modal.addEventListener('click', (e) => {
-      if(!e.target.classList.contains('modal__content')) {
-        modal.classList.remove('open');
-      }
-    })
-
-    document.addEventListener('keydown', (e) => {
-      if(e.key === 'Escape') {
-          modal.classList.remove('open');
-      }
-  })
-
-
-    
    
 });

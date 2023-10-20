@@ -218,7 +218,7 @@
             <h3 class="contacts__title section__title">контакты</h3>
 
             <div class="contacts__content">
-                <form action="send_mail.php" method="POST" class="contacts__form">
+                <form action="mailer/mailer/smart.php" method="POST" class="contacts__form" id="demo-form">
                     <h6 class="contacts__form-title section__subtitle">Напиши мне!</h6>
                     <div class="input-box">
                         <input type="text" class="contacts__form-input required" placeholder="Имя" name="name">
@@ -232,7 +232,7 @@
                         <textarea id="" cols="30" rows="10" class="contacts__form-text required" name="message" ></textarea>
                     </div>
                     
-                    <button type="submit" class="contacts__form-btn main__button">Отправить!</button>
+                    <button type="submit" class="contacts__form-btn main__button" >Отправить!</button>
                 </form>
             </div>
 
@@ -258,7 +258,8 @@
             <p class="modal__content-info"> сообщение отправлено! ;)</p>
         </div>
     </div>
-    
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 </html>
