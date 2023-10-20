@@ -53,6 +53,7 @@ function browsersync(){
 function scripts(){
     return src([
         'node_modules/jquery/dist/jquery.js', 
+        'node_modules/clippyjs/dist/clippy.js',
         'app/js/wow.js', //обращаемся ко всем файлам js 
         'app/js/main.js'
     ])

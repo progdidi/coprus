@@ -75,6 +75,10 @@
                     transform: scale(1.1);
                 }
             }
+
+            .g-recaptcha {
+                margin: 0 auto;
+            }
         }
     }
 
@@ -108,9 +112,10 @@
     #contacts {
         .contacts {
             &__content {
-                width: 90%;
+                width: 100%;
             }
             &__form {
+                max-width: 90%;
                 &-btn {
                     padding: 6px 11px;
                     font-size: 20px;

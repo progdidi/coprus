@@ -27,15 +27,24 @@ $(function(){
         menu.classList.toggle('active')
     })
 
+    menu.addEventListener ('click', () => {
+      if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+      }
+      
+    })
+
 
     //FIXED MENU
     window.addEventListener('scroll', () => {
         const ScrollHeight = window.pageYOffset;
         const headerWrapper = document.querySelector('.header__top');
         const headerTopHeight = headerWrapper.getBoundingClientRect().height;
+        const clippyItem = document.querySelector('.clippy');
     
         if(ScrollHeight > headerTopHeight) {
           headerWrapper.classList.add('header__fixed');
+          
         } else {
           headerWrapper.classList.remove('header__fixed');
         }
@@ -90,6 +99,20 @@ $(function(){
     })
   
     }
+
+
+    
+
+    //Clippy
+
+    window.CLIPPY_CDN = '../helpers/agents/'
+
+    clippy.load('Rover', function(agent) {
+   
+      agent.play('Searching');
+    });
+      
+ 
 
    
 });

@@ -54,6 +54,7 @@
     "camelcase": "^3.0.0",
     "chokidar": "^2.1.8",
     "class-utils": "^0.3.6",
+    "clippyjs": "^0.0.3",
     "cliui": "^3.2.0",
     "clone": "^2.1.2",
     "clone-buffer": "^1.0.0",
