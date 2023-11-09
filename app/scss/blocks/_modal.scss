@@ -14,7 +14,7 @@
     overflow: hidden;
     &__content {
         background-color: $background-color;
-        padding: 100px 30px 20px 30px;
+        padding: 50px 30px 20px 30px;
         border-radius: 20px;
         color: #fff;
         position: relative;
@@ -26,5 +26,13 @@
     }
     &.open {
         display: flex;
+    }
+}
+
+.modal__form {
+    .modal__content {
+        .contacts__form-text {
+            height: 250px;
+        }
     }
 }

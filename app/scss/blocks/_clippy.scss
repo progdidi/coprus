@@ -9,11 +9,11 @@
 .clippy-balloon {
     position: fixed;
     bottom: 100px;
-    right: 100px;
+    right: 400px;
     z-index: 1000;
     cursor: pointer;
-    max-width: 400px;
-    max-height: 200px;
+    width: 150px;
+    height: 100px;
 }
 
 .clippy-balloon {

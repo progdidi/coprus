@@ -8,17 +8,22 @@ $(function(){
     //Clippy
     window.CLIPPY_CDN = '../helpers/agents/';
     clippy.load('Rover', function(agent) {
-        agent.play('Searching');
+        agent.animate();
         const clippyItem = document.querySelector('.clippy');
+
+        const clippySay = function(text){
+          agent.speak(text);
+        }
+
         clippyItem.addEventListener('mouseenter', () => {
-          agent.speak('Тесак себя не убивал');
+          clippySay('Ага!!!');
         })
+
+        setInterval(() => clippySay('огогогог'), 70000);
+
       }
         
-    )
-
-
-    
+    )   
 
 
     //SCROLL AUDIO
@@ -70,16 +75,15 @@ $(function(){
 
 
 
-    //CONTACTS FORM
+    //CONTACTS FORM & MODALS
     {
       const form = document.querySelector('.contacts__form');
-      const formEmail = document.querySelector('.email');
-      const modal = document.querySelector('.modal');
-      const closeBtn = document.querySelector('.close-btn');
+      const modals = document.querySelectorAll('.modal');
+      const closeBtn = document.querySelectorAll('.close-btn');
+      const orderBtn = document.querySelector('.header__promo-btn');
+      const orderForm = document.querySelector('.modal__form');
+      const message = document.querySelector('.modal__message');
   
-      function formReset(){
-        form.reset();
-      }
       
       form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -90,39 +94,41 @@ $(function(){
         });
         req.then(response => {
           if(response.ok && response.status === 200){
-            alert('new!');
-            modal.classList.add('open');
+            message.classList.add('open');
             setTimeout(() => {
-              modal.classList.remove('open');
+              message.classList.remove('open');
             }, 500)
-            formReset();
+            form.reset();
           }
         })
       })
-  
-      closeBtn.addEventListener('click', () => {
-        modal.classList.remove('open');
+
+      closeBtn.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          btn.parentNode.parentNode.classList.remove('open');
+        })
       })
-  
-      modal.addEventListener('click', (e) => {
-        if(!e.target.classList.contains('modal__content')) {
-          modal.classList.remove('open');
-        }
-      })
-  
-      document.addEventListener('keydown', (e) => {
-        if(e.key === 'Escape') {
+
+      modals.forEach((modal) => {
+        modal.addEventListener('click', (e) => {
+          if(!e.target.classList.contains('modal__content')) {
             modal.classList.remove('open');
-        }
-    })
+          }
+        })
+
+        document.addEventListener('keydown', (e) => {
+          if(e.key === 'Escape') {
+              modal.classList.remove('open');
+          }
+        })
+
+      })
+
+      orderBtn.addEventListener('click', () => {
+          orderForm.classList.add('open');
+      })
   
     }
-
-
-    
-
-      
- 
 
    
 });
