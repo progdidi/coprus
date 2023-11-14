@@ -25,6 +25,11 @@
             justify-content: space-evenly;
             &-item {
                 margin-left: 30px;
+                border-bottom: 1px solid transparent;
+                transition: all 0.3s;
+                &:hover {
+                    border-bottom: 1px solid #fff;
+                }
             }
         }
 

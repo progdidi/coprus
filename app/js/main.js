@@ -10,21 +10,24 @@ $(function(){
     clippy.load('Rover', function(agent) {
         agent.animate();
         const clippyItem = document.querySelector('.clippy');
+        const clippyText = ['Тесак себя не убивал', 'подпишись на канал', 'агагагаг'];
 
-        const clippySay = function(text){
-          agent.speak(text);
+        const clippySay = function(){
+          const index = Math.floor(Math.random() * clippyText.length);
+          agent.speak(clippyText[index]);
         }
 
         clippyItem.addEventListener('mouseenter', () => {
-          clippySay('Ага!!!');
+          clippySay();
         })
 
-        setInterval(() => clippySay('огогогог'), 70000);
+        clippyItem.addEventListener('click', () => {
+          clippyItem.classList.add('left');
+        })
 
       }
         
-    )   
-
+    ) 
 
     //SCROLL AUDIO
     const audio = new Audio();

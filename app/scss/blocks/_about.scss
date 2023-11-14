@@ -31,8 +31,12 @@
                 align-items: center;
             }
 
+            &__info {
+                padding-top: 70px;
+                max-width: 90%;
+            }
+
             &__text {
-                max-width: 85%;
                 padding-top: 70px;
             }
         }
@@ -45,9 +49,6 @@
             &__img {
                 min-height: 650px;
             }
-            &__text {
-                max-width: 90%;
-            }
         }
     }
 }
@@ -58,13 +59,7 @@
             &__img {
                 min-height: 400px;
             }
-            &__text {
-                max-width: 90%;
-            }
 
-            &__info {
-                padding-top: 70px;
-            }
         }
     }
 }
