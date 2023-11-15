@@ -111,7 +111,7 @@
     
     <section class="steps">
         <div class="container">
-            <div class="step wow animate__animated" data-wow-duration="1.5s" data-wow-delay="0.5s"> 
+            <div class="step wow animate__animated" data-wow-duration="1.5s" data-wow-delay="0.5s" id="one"> 
                 <h3 class="step__title section__title">Почему вам стоит обратиться ко мне, а не писать самим? Ну смотрите.</h3>
                 <div class="step__inner">
                     <div class="step__content">
@@ -213,11 +213,11 @@
                 <form action="mailer/mailer/smart.php" method="POST" class="contacts__form">
                     <h6 class="contacts__form-title section__subtitle">Напиши мне!</h6>
                     <div class="input-box">
-                        <input type="text" class="contacts__form-input required" placeholder="Имя" name="name">
+                        <input type="text" class="contacts__form-input required" placeholder="Имя" name="name" required>
                     </div>
 
                     <div class="input-box">
-                        <input type="email" class="contacts__form-input required mail" placeholder="Почта" name="email" >
+                        <input type="email" class="contacts__form-input required mail" placeholder="Почта" name="email" required>
                     </div>
 
                     <div class="input-box">
@@ -254,14 +254,14 @@
     <div class="modal modal__form">
         <div class="modal__content">
             <button class="modal__content-btn close-btn">X</button>
-            <form action="mailer/mailer/smart.php" method="POST" class="contacts__form">
+            <form action="mailer/mailer/smart.php" method="POST" class="contacts__form order-form">
                 <h6 class="contacts__form-title section__subtitle">Напиши мне!</h6>
                 <div class="input-box">
-                    <input type="text" class="contacts__form-input required" placeholder="Имя" name="name">
+                    <input type="text" class="contacts__form-input required" placeholder="Имя" name="name" required>
                 </div>
     
                 <div class="input-box">
-                    <input type="email" class="contacts__form-input required mail" placeholder="Почта" name="email" >
+                    <input type="email" class="contacts__form-input required mail" placeholder="Почта" name="email" required>
                 </div>
     
                 <div class="input-box">

@@ -21,13 +21,10 @@ $(function(){
           clippySay();
         })
 
-        clippyItem.addEventListener('click', () => {
-          clippyItem.classList.add('left');
-        })
-
       }
         
     ) 
+
 
     //SCROLL AUDIO
     const audio = new Audio();
@@ -80,31 +77,42 @@ $(function(){
 
     //CONTACTS FORM & MODALS
     {
-      const form = document.querySelector('.contacts__form');
+      const forms = document.querySelectorAll('.contacts__form');
       const modals = document.querySelectorAll('.modal');
       const closeBtn = document.querySelectorAll('.close-btn');
       const orderBtn = document.querySelector('.header__promo-btn');
       const orderForm = document.querySelector('.modal__form');
       const message = document.querySelector('.modal__message');
+      const messageText = document.querySelector('.modal__content-info');
   
-      
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const formData = new FormData(form);
-        const req =  fetch("mailer/mailer/smart.php", {
-          method: 'post',
-          body: formData
-        });
-        req.then(response => {
-          if(response.ok && response.status === 200){
-            message.classList.add('open');
-            setTimeout(() => {
-              message.classList.remove('open');
-            }, 500)
-            form.reset();
-          }
+      forms.forEach((form) => {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const formData = new FormData(form);
+          const req =  fetch("mailer/mailer/smart.php", {
+            method: 'post',
+            body: formData
+          });
+          req.then(response => {
+            if(response.ok && response.status === 200){
+              if(form.classList.contains('order-form')) {
+                orderForm.classList.remove('open');
+              } 
+              message.classList.add('open');
+              setTimeout(() => {
+                message.classList.remove('open');
+              }, 1000)
+              form.reset();
+              
+            } else {
+              messageText.textContent = 'Форма не отправлена';
+              message.classList.add('open');
+            }
+          })
         })
       })
+      
+      
 
       closeBtn.forEach((btn) => {
         btn.addEventListener('click', () => {
@@ -114,7 +122,7 @@ $(function(){
 
       modals.forEach((modal) => {
         modal.addEventListener('click', (e) => {
-          if(!e.target.classList.contains('modal__content')) {
+          if(e.target.classList.contains('modal') && !e.target.classList.contains('modal__content')) {
             modal.classList.remove('open');
           }
         })
