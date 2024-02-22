@@ -6,24 +6,24 @@ $(function(){
 
     
     //Clippy
-    // window.CLIPPY_CDN = '../helpers/agents/';
-    // clippy.load('Rover', function(agent) {
-    //     agent.animate();
-    //     const clippyItem = document.querySelector('.clippy');
-    //     const clippyText = ['Тесак себя не убивал', 'подпишись на канал', 'агагагаг'];
+    window.CLIPPY_CDN = '../helpers/agents/';
+    clippy.load('Rover', function(agent) {
+        agent.animate();
+        const clippyItem = document.querySelector('.clippy');
+        const clippyText = ['Тесак себя не убивал', 'подпишись на канал', 'агагагаг'];
 
-    //     const clippySay = function(){
-    //       const index = Math.floor(Math.random() * clippyText.length);
-    //       agent.speak(clippyText[index]);
-    //     }
+        const clippySay = function(){
+          const index = Math.floor(Math.random() * clippyText.length);
+          agent.speak(clippyText[index]);
+        }
 
-    //     clippyItem.addEventListener('mouseenter', () => {
-    //       clippySay();
-    //     })
+        clippyItem.addEventListener('mouseenter', () => {
+          clippySay();
+        })
 
-    //   }
+      }
         
-    // ) 
+    ) 
 
 
     //steps slider
@@ -69,7 +69,7 @@ $(function(){
 
 
 
-    
+
     //SCROLL AUDIO
     const audio = new Audio();
     audio.preload = 'auto';
