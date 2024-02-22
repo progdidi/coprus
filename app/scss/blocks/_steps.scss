@@ -2,21 +2,22 @@
 @import '../../../node_modules/animate-scss/animate.scss';
 
 .steps {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-bottom: 40px;
+    position: relative;
+    max-height: 100vh;
+    overflow: hidden;
         .step {
-            @include fadeInRight;
             position: relative;
             margin: 0 auto;
+            background: #0C074B;
+            background: radial-gradient(at center, #0C074B, #050321);
             &__title {
                 min-height: 100vh;
+                @include fadeInRight;
             }
             &__inner {
                 display: flex;
                 justify-content: space-between;
                 min-height: 100vh;
-                // background-image: url(../images/blob-haikei.svg);
                 background-repeat: no-repeat;
                 background-position: bottom;
                 background-size: contain;
@@ -43,7 +44,48 @@
 
                 
             }
+    }
+
+    .steps-slider {
+        transition: all 0.7s ease-in;
+        &__item {
+            background: #0C074B;
+            background: radial-gradient(at center, #0C074B, #050321);
+            max-height: 100vh;
+            
         }
+
+    }
+
+    .steps-slider__dots {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 40px;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        .slider-dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            background-color: transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+                background-color: #fff;
+                transform: scale(1.2);
+            }
+            &.active {
+                background-color: #fff;
+                transform: scale(1.2);
+            }
+        }
+    }
 }
 
 

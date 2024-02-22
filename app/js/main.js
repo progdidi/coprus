@@ -6,26 +6,70 @@ $(function(){
 
     
     //Clippy
-    window.CLIPPY_CDN = '../helpers/agents/';
-    clippy.load('Rover', function(agent) {
-        agent.animate();
-        const clippyItem = document.querySelector('.clippy');
-        const clippyText = ['Тесак себя не убивал', 'подпишись на канал', 'агагагаг'];
+    // window.CLIPPY_CDN = '../helpers/agents/';
+    // clippy.load('Rover', function(agent) {
+    //     agent.animate();
+    //     const clippyItem = document.querySelector('.clippy');
+    //     const clippyText = ['Тесак себя не убивал', 'подпишись на канал', 'агагагаг'];
 
-        const clippySay = function(){
-          const index = Math.floor(Math.random() * clippyText.length);
-          agent.speak(clippyText[index]);
-        }
+    //     const clippySay = function(){
+    //       const index = Math.floor(Math.random() * clippyText.length);
+    //       agent.speak(clippyText[index]);
+    //     }
 
-        clippyItem.addEventListener('mouseenter', () => {
-          clippySay();
-        })
+    //     clippyItem.addEventListener('mouseenter', () => {
+    //       clippySay();
+    //     })
 
-      }
+    //   }
         
-    ) 
+    // ) 
 
 
+    //steps slider
+    const sliderDots = document.querySelectorAll('.slider-dot');
+    const slides = document.querySelectorAll('.steps-slider__item');
+    const slider = document.querySelector('.steps-slider');
+    const sliderWrapper = document.querySelector('.steps');
+
+    let slidesLength = slides.length;
+    let slideIndex = 0;
+    slider.style.top = `-${(slidesLength - 1) * 100}vh`;
+
+    function nextSlide() {
+      slideIndex++;
+      slider.style.transform = `translateY(-${slideIndex * 100}vh)`;
+    }
+
+    sliderDots.forEach((dot, i) => [
+      dot.addEventListener('click', () => {
+        dot.classList.add('active');
+        nextSlide();
+      })
+    ])
+
+    function prevSlide() {
+      slideIndex--;
+      slider.style.transform = `translateY(-${slideIndex * 100}vh)`;
+    }
+
+    //листать пробелом
+    function onKeyDown(e) {
+      const keyCode = e.keyCode;
+      if (keyCode === 32) {
+        nextSlide();
+      } 
+    }
+    document.addEventListener("keydown", onKeyDown);
+
+    //листать скроллом
+    document.addEventListener("scroll", () => {
+      nextSlide();
+    });
+
+
+
+    
     //SCROLL AUDIO
     const audio = new Audio();
     audio.preload = 'auto';
