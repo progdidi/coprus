@@ -39,6 +39,9 @@ $(function(){
     function nextSlide() {
       slideIndex++;
       slider.style.transform = `translateY(-${slideIndex * 100}vh)`;
+      if(slideIndex > slidesLength) {
+        slideIndex = 0;
+      }
     }
 
     sliderDots.forEach((dot, i) => [
@@ -60,14 +63,7 @@ $(function(){
         nextSlide();
       } 
     }
-    document.addEventListener("keydown", onKeyDown);
-
-    //листать скроллом
-    document.addEventListener("scroll", () => {
-      nextSlide();
-    });
-
-
+    document.addEventListener("keydown", onKeyDown);  
 
 
     //SCROLL AUDIO

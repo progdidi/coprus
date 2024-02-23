@@ -3,9 +3,10 @@
 
 .steps {
     position: relative;
-    max-height: 100vh;
+    max-height: calc(100vh - 130px);
     overflow: hidden;
-        .step {
+    background: radial-gradient(at center, #0C074B, #050321);
+    .step {
             position: relative;
             margin: 0 auto;
             background: #0C074B;
@@ -52,6 +53,12 @@
             background: #0C074B;
             background: radial-gradient(at center, #0C074B, #050321);
             max-height: 100vh;
+            overflow: hidden;
+            &.title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             
         }
 

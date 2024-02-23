@@ -4,23 +4,23 @@
 #about {
     padding: 40px 0;
     min-height: 100vh;
-    .about__inner {
-        display: flex;
-        align-items: center;
-    }
+    
+}
 
-    .about__info {
-        padding: 200px 10px 0px 5px;
-        max-width: 500px;
-        @include fadeInRight;
-        &-text {
-            margin-bottom: 15px;
-        }
-    }
+.about__inner {
+    display: flex;
+    align-items: center;
+}
 
-    .about__img {
-        min-height: 700px;
+.about__info {
+    max-width: 500px;
+    @include fadeInRight;
+    &-text {
+        margin-bottom: 15px;
     }
+}
+
+.about__img {
 }
 
 @media (max-width: 1000px) {

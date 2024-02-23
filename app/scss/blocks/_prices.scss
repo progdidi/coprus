@@ -7,75 +7,77 @@
     padding-bottom: 40px;
     margin-bottom: 40px;
     min-height: 100vh;
-    .prices {
-        &__inner {
+   
+    
+}
+
+.prices {
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__table {
+        padding-top: 70px;
+        min-width: 500px;
+        max-width: 600px;
+        font-size: 21px;
+        line-height: 25px;
+        margin-right: 50px;
+        tr {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            margin-bottom: 10px;
         }
+        .prices__item {
+            &-name {
+                width: 30%;
+                padding: 0 5px;
+            }
 
-        &__table {
-            padding-top: 70px;
-            min-width: 500px;
-            max-width: 600px;
-            font-size: 21px;
-            line-height: 25px;
-            margin-right: 50px;
-            tr {
+            &-divider {
+                width: 50%;
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
-                padding: 10px 0;
-                margin-bottom: 10px;
-            }
-            .prices__item {
-                &-name {
-                    width: 30%;
-                    padding: 0 5px;
-                }
-
-                &-divider {
-                    width: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 0 10px;
-                    position: relative;
-                    &::after {
-                        position: absolute;
-                        content: '';
-                        height: 1px;
-                        width: auto;
-                        left: 10px;
-                        right: 10px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        background-color: #fff;
-                    }
-                }
-
-                &-num {
-                    padding: 0 5px;
-                    width: 20%;
-                    text-align: right;
+                justify-content: center;
+                padding: 0 10px;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: '';
+                    height: 1px;
+                    width: auto;
+                    left: 10px;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: #fff;
                 }
             }
-        }
 
-        &__list {
-            &-item {
-                padding: 7px 0;
-                border-bottom: 1px solid #fff;
-                display: flex;
-                justify-content: space-between;
+            &-num {
+                padding: 0 5px;
+                width: 20%;
+                text-align: right;
             }
-        }
-
-        &__img {
-            min-height: 550px;
         }
     }
-    
+
+    &__list {
+        &-item {
+            padding: 7px 0;
+            border-bottom: 1px solid #fff;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__img {
+        min-height: 550px;
+    }
 }
 
 @media (max-width: 1070px) {
